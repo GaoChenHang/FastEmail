@@ -1,0 +1,6 @@
+<component name="CopyrightManager">
+  <copyright>
+    <option name="notice" value="Copyright (c) &amp;#36;originalComment.match(&quot;Copyright \(c\) (\d+)&quot;, 1, &quot;-&quot;, &quot;&amp;#36;today.year&quot;)&amp;#36;today.year GaoChenHang. &#10;This code is licensed under the Apache 2.0 open source license. &#10;You can find usage information or restrictions at https://www.apache.org/licenses/LICENSE-2.0.html or in the project's LICENSE file.&#10;GitHub https://github.com/GaoChenHang/FastEmail" />
+    <option name="myName" value="Github ApacheV2" />
+  </copyright>
+</component>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2024 GaoChenHang.
+  ~ This code is licensed under the Apache 2.0 open source license.
+  ~ You can find usage information or restrictions at https://www.apache.org/licenses/LICENSE-2.0.html or in the project's LICENSE file.
+  ~ GitHub https://github.com/GaoChenHang/FastEmail
+  -->
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="github.gaochenhang.fastemail_be.mapper.UserMapper">
+
+    <resultMap id="UserTable" type="github.gaochenhang.fastemail_be.entity.User">
+        <id property="userId" column="userId"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="createTime" column="created_time"/>
+        <result property="role" column="role"/>
+    </resultMap>
+
+    <insert id="addNewUser" parameterType="github.gaochenhang.fastemail_be.entity.User">
+        INSERT INTO user(userId, username, password, role)
+        VALUES (#{userId}, #{username}, #{password}, #{role})
+    </insert>
+
+    <select id="getUserByUsername" parameterType="String" resultMap="UserTable">
+        SELECT *
+        FROM user
+        WHERE username = #{username}
+    </select>
+</mapper>
