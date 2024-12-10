@@ -7,6 +7,10 @@
 
 package github.gaochenhang.fastemail_be;
 
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -16,7 +20,7 @@ import java.security.NoSuchAlgorithmException;
  * @author Gch
  */
 public class SHAUtil {
-
+    private static final Logger log = LoggerFactory.getLogger(SHAUtil.class);
     /**
      * 传入文本内容，返回 SHA-256 哈希值
      *
@@ -83,7 +87,7 @@ public class SHAUtil {
                 strResult = strHexString.toString();
             } catch (NoSuchAlgorithmException e) {
                 // 抛出运行时异常，指示指定的哈希算法不存在
-                throw new RuntimeException("Hash algorithm not found: " + strType, e);
+                log.error("Hash algorithm not found: {}", strType);
             }
         }
 

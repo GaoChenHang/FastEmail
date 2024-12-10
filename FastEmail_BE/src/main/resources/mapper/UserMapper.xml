@@ -28,5 +28,14 @@
         SELECT *
         FROM user
         WHERE username = #{username}
+
+    </select>
+
+
+<!--    根据用户名查询对应的密码-->
+    <select id="getUserPasswordByUsername" parameterType="String" resultType="String">
+        SELECT password
+        FROM user
+        WHERE username = #{username}
     </select>
 </mapper>

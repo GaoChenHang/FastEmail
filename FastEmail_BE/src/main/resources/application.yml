@@ -39,3 +39,6 @@ fast:
     password: password
     port: 465
     smtp_host: smtp.mail.qq.com
+    jwt:
+      secret: FE9E123B30D7DED2B7426F11D57BF1272D4A4A15EE8534B01BB8E6A8D5465581
+
